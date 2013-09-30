@@ -8,6 +8,7 @@ Create a method, apple_picker, that will pick all the apples out of an array. Im
 
 ```ruby
 apple_picker(["apple", "orange", "apple"]) #=> ["apple", "apple"]
+```
 
 # Holiday Suppliers
 
