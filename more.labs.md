@@ -55,3 +55,7 @@ Winter:
   Christmas: Lights and Wreath
   New Years: Party Hats
 ```
+
+7. Write a method to collect all holidays with BBQ.
+
+`holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]`
