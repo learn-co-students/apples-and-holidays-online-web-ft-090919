@@ -1,3 +1,8 @@
+---
+  tags: todo, collect, select, hashes, iteration, collect, map
+  languages: ruby
+---
+
 # Apple Picker
 
 ## Skills: Collect and Select
