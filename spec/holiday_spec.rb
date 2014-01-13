@@ -102,15 +102,25 @@ describe "holiday_supplies_hash" do
 			holiday_supplies.each do |season, holidays|
 				output << "#{season.capitalize}:\n"
 				holidays.each do |holiday, supplies|
-					output << "  #{holiday.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}\n"
+					output << "  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}\n"
 				end
 			end
 		end
 
-		it "should output the formatted list of holidays and their supplies" do
-			
-		end
+    it "should output the formatted list of holidays and their supplies" do
+      output.each_line do |line|
+        expect($stdout).to_receive(:puts).with(line)
+      end
+
+      all_supplies_in_holidays(holiday_supplies)
+    end
 	end
+
+  describe "#all_holidays_with_bbq" do
+    it "should return :fourth_of_july and :memorial_day" do
+      expect(all_holidays_with_bbq(holiday_supplies)).to eq([:fourth_of_july, :memorial_day])
+    end
+  end
 
 end
 
