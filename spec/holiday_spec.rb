@@ -105,11 +105,4 @@ describe "holiday_supplies_hash" do
       expect(all_holidays_with_bbq(holiday_supplies)).to eq([:fourth_of_july, :memorial_day])
     end
   end
-
-  end
-
-
-
-
-
-
+end
