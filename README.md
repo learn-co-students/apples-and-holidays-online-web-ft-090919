@@ -5,7 +5,7 @@
 
 # Apple Picker
 
-## Skills: Collect and Select
+### Skills: Collect and Select
 
 ## Instructions
 
