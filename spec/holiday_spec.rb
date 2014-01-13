@@ -2,22 +2,22 @@ require 'spec_helper'
 
 describe "holiday_supplies_hash" do
 	let(:holiday_supplies) {
-												   {
-													 	  :winter => {
-													 	    :christmas => ["Lights", "Wreath"],
-													 	    :new_years => ["Party Hats"]
-													 	  },
-													 	  :summer => {
-													 	    :fourth_of_july => ["Fireworks", "BBQ"]
-													 	  },
-													 	  :fall => {
-													 	    :thanksgiving => ["Turkey"]
-													 	  },
-													 	  :spring => {
-													 	    :memorial_day => ["BBQ"]
-													 	  }
-												 	 }
-												 }
+    {
+      :winter => {
+        :christmas => ["Lights", "Wreath"],
+        :new_years => ["Party Hats"]
+      },
+      :summer => {
+        :fourth_of_july => ["Fireworks", "BBQ"]
+      },
+      :fall => {
+        :thanksgiving => ["Turkey"]
+      },
+      :spring => {
+        :memorial_day => ["BBQ"]
+      }
+    }
+  }
 
 	let(:supply) {"balloons"}
 
