@@ -21,7 +21,7 @@ When you're done, write a sentence describing the difference between collect and
 
 # Holiday Suppliers
 
-## Skills: Hashes, Iteration, Collect
+### Skills: Hashes, Iteration, Collect
 
 You have a bunch of decorations for various holidays organized by season.
 
@@ -42,21 +42,31 @@ holiday_supplies = {
   }
 }
 ```
-## Questions
+## Instructions
 
-1. How would you access the second supply for the forth_of_july?
-ex: `holiday_supplies[:spring][:memorial_day][0]`
+1. Write a method that returns the second supply for the forth_of_july.
+ex:
 
-2. Add a supply to a Winter holiday.
+```ruby
+def first_memorial_day_supply(holiday_supplies)
+  holiday_supplies[:spring][:memorial_day][0]
+end
+```
 
-3. Add a supply to memorial day.
+2. Write a method that adds a supply to a Winter holiday.
 
-4. Add a new holiday to any season with supplies.
+3. Write a method that adds a supply to Memorial Day.
+
+4. Write a method that adds a new holiday to any season with supplies.
 
 5. Write a method to collect all Winter supplies from all the winter holidays.
-ex: `winter_suppliers(holiday_supplies) #=> ["Lights", "Wreath", etc]`
+ex:
 
-6. Write a loop to list out all the supplies you have for each holiday and the season.
+```bash
+winter_supplies(holiday_supplies) #=> ["Lights", "Wreath", etc]
+```
+
+6. Write a method that uses a loop to list out all the supplies you have for each holiday and the season.
 
 Output:
 ```
@@ -66,5 +76,8 @@ Winter:
 ```
 
 7. Write a method to collect all holidays with BBQ.
+ex:
 
-`holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]`
+```bash
+holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]
+```
