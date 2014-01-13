@@ -65,23 +65,6 @@ describe "holiday_supplies_hash" do
 
 		it "should have an extra holiday in a season" do
 			expect(@new_holiday_hash[@season][@new_holiday_name]).to eq(@supplies_list)
-
-			# holiday_comparisons = holliday_supplies.each_with_index.map do |season, holiday_hash, index|
-			# 	{
-			# 		season: season,
-			# 		holiday: holiday_hash.key,
-			# 		supplies: holiday_hash.value,
-			# 		old_holiday_count: holiday_hash.value.count,
-			# 		new_holiday_count: new_holiday_hash[season][holiday_hash.key].count
-			# 	}
-			# end
-
-			# season_comparison = holiday_comparisons.detect do |comparison|
-			# 	comparison[new_holiday_count] > comparison[old_holiday_count]
-			# end
-
-			# expect(season_comparison).to_not be_nil
-			# expect(season_comparison[:supplies].count > 0).to be_true
 		end
 	end
 
