@@ -1,4 +1,4 @@
-fruit_array = ["apple", "orange", "apple"]
+fruits = ["apple", "orange", "apple"]
 
 # Write your code here.
 
