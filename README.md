@@ -44,7 +44,7 @@ holiday_supplies = {
 ```
 ## Instructions
 
-1. Write a method that returns the second supply for the forth_of_july.
+* Write a method that returns the second supply for the forth_of_july.
 ex:
 
 ```ruby
@@ -53,20 +53,21 @@ def first_memorial_day_supply(holiday_supplies)
 end
 ```
 
-2. Write a method that adds a supply to a Winter holiday.
+* Write a method that adds a supply to a Winter holiday.
 
-3. Write a method that adds a supply to Memorial Day.
+* Write a method that adds a supply to Memorial Day.
 
-4. Write a method that adds a new holiday to any season with supplies.
+* Write a method that adds a new holiday to any season with supplies.
 
-5. Write a method to collect all Winter supplies from all the winter holidays.
+* Write a method to collect all Winter supplies from all the winter holidays.
 ex:
 
 ```bash
 winter_supplies(holiday_supplies) #=> ["Lights", "Wreath", etc]
 ```
 
-6. Write a method that uses a loop to list out all the supplies you have for each holiday and the season.
+* Write a method that uses a loop to list out all the supplies you have for each holiday and the season.
+
 
 Output:
 ```
@@ -75,7 +76,7 @@ Winter:
   New Years: Party Hats
 ```
 
-7. Write a method to collect all holidays with BBQ.
+* Write a method to collect all holidays with BBQ.
 ex:
 
 ```bash
