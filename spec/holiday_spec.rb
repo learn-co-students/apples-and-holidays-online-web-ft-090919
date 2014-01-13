@@ -19,7 +19,7 @@ describe "holiday_supplies_hash" do
 												 	 }
 												 }
 
-	let(:supply) {"generic supply"}
+	let(:supply) {"party hat"}
 
 	describe "#first_memorial_day_supply" do
 		it "should return BBQ" do
@@ -39,7 +39,26 @@ describe "holiday_supplies_hash" do
 		end
 	end
 
-	describe "#new_memorial_day_supply" do
+	describe "#add_supply_to_memorial_day" do
 		before do 
+			add_supply_to_memorial_day(supply)
+			memorial_day_supplies = holiday_supplies[:spring][:memorial_day]
+		end
 
+		it "should add a supply to memorial day" do
+			expect(memorial_day_supplies).to include(supply)
+		end
+	end
+
+	describe "#add_new_holiday_with_supplies" do
+		before do
+			add_new_holiday_with_supplies
+			
+	end
 end
+
+
+
+
+
+
