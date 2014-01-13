@@ -62,23 +62,23 @@ ex:
 5. Write a method to collect all Winter supplies from all the winter holidays.
 ex:
 
-        ```bash
-        winter_supplies(holiday_supplies) #=> ["Lights", "Wreath", etc]
-        ```
+    ```bash
+    winter_supplies(holiday_supplies) #=> ["Lights", "Wreath", etc]
+    ```
 
 6. Write a method that uses a loop to list out all the supplies you have for each holiday and the season.
 
 
         Output:
-        ```
-        Winter:
-          Christmas: Lights, Wreath
-          New Years: Party Hats
-        ```
+    ```
+    Winter:
+      Christmas: Lights, Wreath
+      New Years: Party Hats
+    ```
 
 7. Write a method to collect all holidays with BBQ.
 ex:
 
-        ```bash
-        holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]
-        ```
+    ```bash
+    holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]
+    ```
