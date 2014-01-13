@@ -21,7 +21,7 @@ When you're done, write a sentence describing the difference between collect and
 
 # Holiday Suppliers
 
-## Skills: Hashes, Iteration, Collect
+### Skills: Hashes, Iteration, Collect
 
 You have a bunch of decorations for various holidays organized by season.
 
