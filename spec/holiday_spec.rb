@@ -70,9 +70,7 @@ describe "holiday_supplies_hash" do
 
   describe "#all_winter_holiday_supplies" do
     before do
-      @winter_supplies = holiday_supplies[:winter].map do |holiday, supplies|
-        supplies
-      end.flatten
+      @winter_supplies = ["Lights", "Wreath", "Party Hats"]
     end
 
     it "should have all the winter supplies" do
@@ -81,23 +79,48 @@ describe "holiday_supplies_hash" do
   end
 
   describe "#all_supplies_in_holidays" do
+
+    # There are two ways we might go about outputting a big block of text. One way
+    # is to iterate through everything we want output, and puts it line by line. Another
+    # way is to build a large string, and puts it all at once. How you choose to do it
+    # is entirely up to you, and depends on what you think works best in any given
+    # situation.
+
     before do
-      @output = ""
-      holiday_supplies.each do |season, holidays|
-        @output << "#{season.capitalize}:\n"
-        holidays.each do |holiday, supplies|
-          @output << "  #{holiday.to_s.split('_').map {|w| w.capitalize }.join(' ') }: #{supplies.join(", ")}\n"
-        end
-      end
+
+    # This funny looking <<-TEXT thing is called heredoc. It's a multi-line string
+    # delimiter that makes it really easy for us to write multi-line strings in the middle
+    # of code. The TEXT part is arbitrary too. It could easily have been <<-BLAHBLAH. The only
+    # requirement is that you use the same word to end the multi-line string.
+      @output = <<-TEXT
+Winter:
+  Christmas: Lights, Wreath
+  New Years: Party Hats
+Summer:
+  Fourth Of July: Fireworks, BBQ
+Fall:
+  Thanksgiving: Turkey
+Spring:
+  Memorial Day: BBQ
+TEXT
     end
+
+    # For the purposes of this test, we are assuming that you decided to output your list
+    # of holiday supplies line by line. If, on the other hand, you decided to output it
+    # as one big chunk, comment out this test, and uncomment the one below it.
 
     it "should output the formatted list of holidays and their supplies" do
       @output.each_line do |line|
-        expect($stdout).to receive(:puts).with(line.chomp)
+        expect($stdout).to receive(:puts).with(line)
       end
 
       all_supplies_in_holidays(holiday_supplies)
     end
+
+    # it "should output the formatted list of holidays and their supplies" do
+    #   expect($stdout).to receive(:puts).with(@output)
+    # end
+
   end
 
   describe "#all_holidays_with_bbq" do
