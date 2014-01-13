@@ -72,7 +72,7 @@ ex:
         Output:
         ```
         Winter:
-          Christmas: Lights and Wreath
+          Christmas: Lights, Wreath
           New Years: Party Hats
         ```
 
