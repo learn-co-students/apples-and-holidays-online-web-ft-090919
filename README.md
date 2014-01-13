@@ -44,41 +44,41 @@ holiday_supplies = {
 ```
 ## Instructions
 
-* Write a method that returns the second supply for the forth_of_july.
+1. Write a method that returns the second supply for the forth_of_july.
 ex:
 
-```ruby
-def first_memorial_day_supply(holiday_supplies)
-  holiday_supplies[:spring][:memorial_day][0]
-end
-```
+        ```ruby
+        def first_memorial_day_supply(holiday_supplies)
+          holiday_supplies[:spring][:memorial_day][0]
+        end
+        ```
 
-* Write a method that adds a supply to a Winter holiday.
+2. Write a method that adds a supply to a Winter holiday.
 
-* Write a method that adds a supply to Memorial Day.
+3. Write a method that adds a supply to Memorial Day.
 
-* Write a method that adds a new holiday to any season with supplies.
+4. Write a method that adds a new holiday to any season with supplies.
 
-* Write a method to collect all Winter supplies from all the winter holidays.
+5. Write a method to collect all Winter supplies from all the winter holidays.
 ex:
 
-```bash
-winter_supplies(holiday_supplies) #=> ["Lights", "Wreath", etc]
-```
+        ```bash
+        winter_supplies(holiday_supplies) #=> ["Lights", "Wreath", etc]
+        ```
 
-* Write a method that uses a loop to list out all the supplies you have for each holiday and the season.
+6. Write a method that uses a loop to list out all the supplies you have for each holiday and the season.
 
 
-Output:
-```
-Winter:
-  Christmas: Lights and Wreath
-  New Years: Party Hats
-```
+        Output:
+        ```
+        Winter:
+          Christmas: Lights and Wreath
+          New Years: Party Hats
+        ```
 
-* Write a method to collect all holidays with BBQ.
+7. Write a method to collect all holidays with BBQ.
 ex:
 
-```bash
-holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]
-```
+        ```bash
+        holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]
+        ```
