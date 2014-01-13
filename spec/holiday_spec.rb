@@ -106,6 +106,10 @@ describe "holiday_supplies_hash" do
 				end
 			end
 		end
+
+		it "should output the formatted list of holidays and their supplies" do
+			
+		end
 	end
 
 end
