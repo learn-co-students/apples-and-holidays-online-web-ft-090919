@@ -20,8 +20,7 @@ describe "#apple_picker_with_collect" do
   end
 
   it "should return an array without nil elements" do
-    expect{Array.any_instance}.to receive(:compact)
-    expect(apple_picker_with_collect(fruit_array)).to eq(["apple", "apple"])
+    expect(apple_picker_with_collect(fruit_array)).to_not include(nil)
   end
 
 end
