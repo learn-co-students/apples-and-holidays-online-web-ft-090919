@@ -1,26 +1,21 @@
 require 'spec_helper'
 
-
-describe "#apple_picker_with_select" do
-
-  let(:fruit_array) { ["apple", "orange", "apple"] }
-
-  it "should return an array of apples" do
-    expect(apple_picker_with_select(fruit_array)).to_not include("orange")
+describe "Picking Apples" do
+  let(:fruits) { ["apple", "orange", "apple"] }
+  
+  describe "#apple_picker_with_select" do
+    it "should return an array of apples" do
+      expect(apple_picker_with_select(fruits)).to_not include("orange")
+    end
   end
-
-end
-
-describe "#apple_picker_with_collect" do
-
-  let(:fruit_array) { ["apple", "orange", "apple"] }
-
-  it "should return an array of apples" do
-    expect(apple_picker_with_collect(fruit_array)).to_not include("orange")
+  
+  describe "#apple_picker_with_collect" do
+    it "should return an array of apples" do
+      expect(apple_picker_with_collect(fruits)).to_not include("orange")
+    end
+    
+    it "should return an array without nil elements" do
+      expect(apple_picker_with_collect(fruits)).to_not include(nil)
+    end
   end
-
-  it "should return an array without nil elements" do
-    expect(apple_picker_with_collect(fruit_array)).to_not include(nil)
-  end
-
 end
