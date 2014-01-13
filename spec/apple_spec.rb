@@ -19,4 +19,3 @@ describe "Picking Apples" do
     end
   end
 end
-
