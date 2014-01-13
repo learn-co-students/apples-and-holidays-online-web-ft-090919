@@ -32,7 +32,7 @@ holiday_supplies = {
     :new_years => ["Party Hats"]
   },
   :summer => {
-    :forth_of_july => ["Fireworks", "BBQ"]
+    :fourth_of_july => ["Fireworks", "BBQ"]
   },
   :fall => {
     :thanksgiving => ["Turkey"]
