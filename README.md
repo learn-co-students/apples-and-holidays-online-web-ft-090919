@@ -19,9 +19,9 @@ apple_picker_with_select(fruit_array) #=> ["apple", "apple"]
 
 When you're done, write a sentence describing the difference between collect and select, and what each method does. 
 
-# Holiday Suppliers
-
 ### Skills: Hashes, Iteration, Collect
+
+The Holiday Suppliers 
 
 You have a bunch of decorations for various holidays organized by season.
 

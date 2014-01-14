@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "holiday_supplies_hash" do
+# Hash of seasons, the holidays in them, and some items each holiday might have.
   let(:holiday_supplies) {
     {
       :winter => {
@@ -21,12 +22,16 @@ describe "holiday_supplies_hash" do
 
   let(:supply) {"balloons"}
 
+ # Question 1
+ # Write a method that returns the second supply for the forth_of_july
   describe "#first_memorial_day_supply" do
     it "should return BBQ" do
       expect(first_memorial_day_supply(holiday_supplies)).to eq("BBQ")
     end
   end
 
+  # Question 2
+  # Write a method that adds a supply to a Winter holiday
   describe "#new_winter_holiday_supply" do
     before do
       add_supply_to_winter_holiday(holiday_supplies, supply)
@@ -40,6 +45,8 @@ describe "holiday_supplies_hash" do
     end
   end
 
+  # Question 3
+  # Write a method that adds a supply to Memorial Day
   describe "#add_supply_to_memorial_day" do
     before do 
       add_supply_to_memorial_day(holiday_supplies, supply)
@@ -51,6 +58,8 @@ describe "holiday_supplies_hash" do
     end
   end
 
+  # Question 4
+  # Write a method that adds a new holiday to any season with supplies
   describe "#add_new_holiday_with_supplies" do
     before do
       @season = :fall
@@ -68,6 +77,8 @@ describe "holiday_supplies_hash" do
     end
   end
 
+  # Question 5
+  # Write a method to collect all Winter supplies from all the winter holidays
   describe "#all_winter_holiday_supplies" do
     before do
       @winter_supplies = ["Lights", "Wreath", "Party Hats"]
@@ -78,6 +89,8 @@ describe "holiday_supplies_hash" do
     end
   end
 
+  # Question 6
+  # Write a method that uses a loop to list out all the supplies you have for each holiday and the season
   describe "#all_supplies_in_holidays" do
 
     # There are two ways we might go about outputting a big block of text. One way
@@ -123,6 +136,8 @@ TEXT
 
   end
 
+  # Question 7
+  # Write a method to collect all holidays with BBQ
   describe "#all_holidays_with_bbq" do
     it "should return :fourth_of_july and :memorial_day" do
       expect(all_holidays_with_bbq(holiday_supplies)).to eq([:fourth_of_july, :memorial_day])
