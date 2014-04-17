@@ -32,7 +32,7 @@ describe "holiday_supplies_hash" do
 
   # Question 2
   # Write a method that adds a supply to a Winter holiday
-  describe "#new_winter_holiday_supply" do
+  describe "#add_supply_to_winter_holiday" do
     before do
       add_supply_to_winter_holiday(holiday_supplies, supply)
       @christmas_supplies = holiday_supplies[:winter][:christmas]
