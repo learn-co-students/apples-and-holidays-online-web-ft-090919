@@ -5,8 +5,6 @@
 
 # Apple Picker
 
-### Skills: Collect and Select
-
 ## Instructions
 
 In apple.rb write two methods that will pick the apples out of the fruits array, one using select, and the other using collect. 
