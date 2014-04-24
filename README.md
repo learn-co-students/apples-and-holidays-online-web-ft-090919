@@ -5,16 +5,14 @@
 
 # Apple Picker
 
-### Skills: Collect and Select
-
 ## Instructions
 
-In apple.rb write two methods that will pick the apples out of the fruit_array, one using select, and the other using collect. 
+In apple.rb write two methods that will pick the apples out of the fruits array, one using select, and the other using collect. 
 
 ```ruby
-fruit_array = ["apple", "orange", "apple"]
+fruits = ["apple", "orange", "apple"]
 
-apple_picker_with_select(fruit_array) #=> ["apple", "apple"]
+apple_picker_with_select(fruits) #=> ["apple", "apple"]
 ```
 
 When you're done, write a sentence describing the difference between collect and select, and what each method does. 
