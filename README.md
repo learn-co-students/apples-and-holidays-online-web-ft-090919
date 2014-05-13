@@ -1,7 +1,7 @@
 ---
   tags: todo, collect, select, hashes, iteration, collect, map
   languages: ruby
-resources: 2
+  resources: 2
 ---
 
 # Apple Picker
