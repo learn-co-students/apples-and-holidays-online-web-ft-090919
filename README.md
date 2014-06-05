@@ -83,5 +83,5 @@ ex:
     ```
 
 ## Resources
-* [Programming Ruby 1.9](http://books.flatironschool.com/books/11) - [2.3 Arrays and Hashes](http://books.flatironschool.com/books/11), page 36
+* [Programming Ruby 1.9](http://books.flatironschool.com/books/11?page=36) - [2.3 Arrays and Hashes](http://books.flatironschool.com/books/11?page=36), page 36
 * [Codequizzes](http://www.codequizzes.com/learn-ruby/) - [Iteration Nested Data Structures](http://www.codequizzes.com/learn-ruby/iteration-nested-data-structures)
