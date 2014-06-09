@@ -43,7 +43,7 @@ holiday_supplies = {
 ```
 ## Instructions
 
-1. # Write a method that returns the second supply for the Fourth of July.
+1. Write a method that returns the second supply for the Fourth of July.
 ex:
 
     ```ruby
