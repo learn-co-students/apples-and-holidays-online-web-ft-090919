@@ -43,12 +43,12 @@ holiday_supplies = {
 ```
 ## Instructions
 
-1. Write a method that returns the second supply for the first_memorial_day_supply.
+1. # Write a method that returns the second supply for the Fourth of July.
 ex:
 
     ```ruby
-    def first_memorial_day_supply(holiday_supplies)
-      holiday_supplies[:spring][:memorial_day][0]
+    def second_supply_for_fourth_of_july(holiday_supplies)
+      holiday_supplies[:summer][:fourth_of_july][1]
     end
     ```
 

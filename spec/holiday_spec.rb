@@ -23,10 +23,10 @@ describe "holiday_supplies_hash" do
   let(:supply) {"balloons"}
 
  # Question 1
- # Write a method that returns the second supply for the first memorial day supply
-  describe "#first_memorial_day_supply" do
+ # Write a method that returns the second supply for the Fourth of July
+  describe "#second_supply_for_fourth_of_july" do
     it "should return BBQ" do
-      expect(first_memorial_day_supply(holiday_supplies)).to eq("BBQ")
+      expect(second_supply_for_fourth_of_july(holiday_supplies)).to eq("BBQ")
     end
   end
 
