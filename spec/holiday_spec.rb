@@ -39,8 +39,8 @@ describe "holiday_supplies_hash" do
       @new_years_supplies = holiday_supplies[:winter][:new_years]
       @winter_supplies = @christmas_supplies + @new_years_supplies
     end
-    
-    it "should add a supply to a winter holiday" do 
+
+    it "should add a supply to a winter holiday" do
       expect(@winter_supplies).to include(supply)
     end
   end
@@ -48,7 +48,7 @@ describe "holiday_supplies_hash" do
   # Question 3
   # Write a method that adds a supply to Memorial Day
   describe "#add_supply_to_memorial_day" do
-    before do 
+    before do
       add_supply_to_memorial_day(holiday_supplies, supply)
       @memorial_day_supplies = holiday_supplies[:spring][:memorial_day]
     end
@@ -59,7 +59,7 @@ describe "holiday_supplies_hash" do
   end
 
   # Question 4
-  # Write a method that adds a new holiday to any season with supplies
+  # Write a method that adds a new holiday and its associated supplies to any season
   describe "#add_new_holiday_with_supplies" do
     before do
       @season = :fall
@@ -107,7 +107,7 @@ describe "holiday_supplies_hash" do
     # requirement is that you use the same word to end the multi-line string.
 
     # For more info about heredocs, see this link: http://en.wikibooks.org/wiki/Ruby_Programming/Here_documents
-    
+
       @output = <<-TEXT
 Winter:
   Christmas: Lights, Wreath

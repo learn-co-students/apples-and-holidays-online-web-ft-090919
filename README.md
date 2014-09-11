@@ -8,7 +8,7 @@
 
 ## Instructions
 
-In apple.rb write two methods that will pick the apples out of the fruits array, one using select, and the other using collect. 
+In apple.rb write two methods that will pick the apples out of the fruits array, one using select, and the other using collect.
 
 ```ruby
 fruits = ["apple", "orange", "apple"]
@@ -16,11 +16,11 @@ fruits = ["apple", "orange", "apple"]
 apple_picker_with_select(fruits) #=> ["apple", "apple"]
 ```
 
-When you're done, write a sentence describing the difference between collect and select, and what each method does. 
+When you're done, write a sentence describing the difference between collect and select, and what each method does.
 
 ### Skills: Hashes, Iteration, Collect
 
-The Holiday Suppliers 
+The Holiday Suppliers
 
 You have a bunch of decorations for various holidays organized by season.
 
@@ -56,7 +56,7 @@ ex:
 
 3. Write a method that adds a supply to Memorial Day.
 
-4. Write a method that adds a new holiday to any season with supplies.
+4. Write a method that adds a new holiday and its associated supplies to any season
 
 5. Write a method to collect all Winter supplies from all the winter holidays.
 ex:
