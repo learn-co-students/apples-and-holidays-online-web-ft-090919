@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe "Picking Apples" do
-  let(:fruits) { ["apple", "orange", "apple"] }
+  let(:fruits)   { ["apple", "orange", "apple"] }
   let(:smoothie) { ["carrot", "apple", "pepper", "cucumber", "apple", "apple"] }
-  let(:veggies) { ["pepper", "carrot", "cucumber"] }
+  let(:veggies)  { ["pepper", "carrot", "cucumber"] }
 
   describe "#apple_picker_with_select" do
 
@@ -14,14 +14,14 @@ describe "Picking Apples" do
       end
     end
 
-    it "returns an array with the same # of elements as 'apples' in the original"
+    it "returns an array with the same # of elements as 'apples' in the original array" do
       expect(apple_picker_with_select(fruits).length).to eq(2)
-      expect(apple_picker_with_collect(fruits).length).to eq(3)
+      expect(apple_picker_with_select(smoothie).length).to eq(3)
+    end
 
-
-    it "should return an array of all the apple strings that are in the argument" do
-      expect(apple_picker_with_select(fruits).to eq(["apple", "apple"])
-      expect(apple_picker_with_select(smoothie).to eq(["apple", "apple", "apple"])
+    it "should return an array of all the apple strings that are in the original array" do
+      expect(apple_picker_with_select(fruits)).to eq(["apple", "apple"])
+      expect(apple_picker_with_select(smoothie)).to eq(["apple", "apple", "apple"])
     end
   end
   
@@ -33,14 +33,14 @@ describe "Picking Apples" do
       end
     end
 
-    it "returns an array with the same # of elements as 'apples' in the original"
+    it "returns an array with the same # of elements as 'apples' in the original array" do
       expect(apple_picker_with_collect(fruits).length).to eq(2)
-      expect(apple_picker_with_collect(fruits).length).to eq(3)
+      expect(apple_picker_with_collect(smoothie).length).to eq(3)
+    end
 
-
-    it "should return an array of all the apple strings that are in the argument" do
-      expect(apple_picker_with_collect(fruits).to eq(["apple", "apple"])
-      expect(apple_picker_with_collect(smoothie).to eq(["apple", "apple", "apple"])
+    it "should return an array of all the apple strings that are in the original array" do
+      expect(apple_picker_with_collect(fruits)).to eq(["apple", "apple"])
+      expect(apple_picker_with_collect(smoothie)).to eq(["apple", "apple", "apple"])
     end
     
     it "should return an array without nil elements" do
