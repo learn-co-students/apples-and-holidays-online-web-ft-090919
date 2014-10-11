@@ -1,14 +1,14 @@
 ---
-  tags: todo, collect, select, hashes, iteration, collect, map
-  languages: ruby
-  resources: 2
+tags: todo, collect, select, hashes, iteration, collect, map
+languages: ruby
+resources: 2
 ---
 
 # Apple Picker
 
 ## Instructions
 
-In apple.rb write two methods that will pick the apples out of the fruits array, one using select, and the other using collect.
+In `lib/apple.rb` write two methods that will pick the apples out of the fruits array, one using select, and the other using collect.
 
 ```ruby
 fruits = ["apple", "orange", "apple"]
@@ -43,7 +43,7 @@ holiday_supplies = {
 ```
 ## Instructions
 
-1. Write a method that returns the second supply for the Fourth of July.
+1. In `lib/holiday.rb`, write a method that returns the second supply for the Fourth of July.
 ex:
 
     ```ruby
