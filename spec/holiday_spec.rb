@@ -84,13 +84,11 @@ describe "holiday_supplies_hash" do
 
     it "has two total holidays in fall when holiday is added to fall" do
       num_of_keys_in_fall = add_columbus_day[:fall].keys.size
-      expect(num_of_keys_in_fall).to eq(holiday_supplies[:fall].keys.size + 1)
       expect(num_of_keys_in_fall).to eq(2)
     end
 
     it "has three total holidays in winter when holiday is added to winter" do
       num_of_keys_in_winter = add_v_day[:winter].keys.size
-      expect(num_of_keys_in_winter).to eq(holiday_supplies[:winter].keys.size + 1)
       expect(num_of_keys_in_winter).to eq(3)
     end
 
