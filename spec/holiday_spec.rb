@@ -20,12 +20,10 @@ describe "holiday_supplies_hash" do
     }
   }
 
-  let(:supply) {"balloons"}
-
  # Question 1
  # Write a method that returns the second supply for the Fourth of July
   describe "#second_supply_for_fourth_of_july" do
-    it "should return BBQ" do
+    it "returns the string 'BBQ' without hardcoding it" do
       expect(second_supply_for_fourth_of_july(holiday_supplies)).to eq("BBQ")
     end
   end
@@ -33,59 +31,84 @@ describe "holiday_supplies_hash" do
   # Question 2
   # Write a method that adds a supply to a Winter holiday
   describe "#add_supply_to_winter_holiday" do
-    before do
-      add_supply_to_winter_holiday(holiday_supplies, supply)
-      @christmas_supplies = holiday_supplies[:winter][:christmas]
-      @new_years_supplies = holiday_supplies[:winter][:new_years]
-      @winter_supplies = @christmas_supplies + @new_years_supplies
+
+    let(:xmas)      { holiday_supplies[:winter][:christmas] }
+    let(:new_years) { holiday_supplies[:winter][:new_years] }
+
+    it "adds a supply to a (any) winter holiday" do
+      add_supply_to_winter_holiday(holiday_supplies, "Balloons")
+      expect(xmas + new_years).to include("Balloons")
     end
 
-    it "should add a supply to a winter holiday" do
-      expect(@winter_supplies).to include(supply)
+    it "adds a supply to a winter holiday" do
+      add_supply_to_winter_holiday(holiday_supplies, "Tinsel")
+      expect(xmas + new_years).to include("Tinsel")
     end
   end
 
   # Question 3
   # Write a method that adds a supply to Memorial Day
   describe "#add_supply_to_memorial_day" do
-    before do
-      add_supply_to_memorial_day(holiday_supplies, supply)
-      @memorial_day_supplies = holiday_supplies[:spring][:memorial_day]
+    let(:memorial_day_supplies) { holiday_supplies[:spring][:memorial_day] }
+
+    it "adds a supply to memorial day" do
+      add_supply_to_memorial_day(holiday_supplies, "Grill")
+      expect(memorial_day_supplies).to include("Grill")
     end
 
-    it "should add a supply to memorial day" do
-      expect(@memorial_day_supplies).to include(supply)
+    it "adds a supply to memorial day" do
+      add_supply_to_memorial_day(holiday_supplies, "Table Cloth")
+      expect(memorial_day_supplies).to include("Table Cloth")
     end
   end
 
   # Question 4
   # Write a method that adds a new holiday and its associated supplies to any season
   describe "#add_new_holiday_with_supplies" do
-    before do
-      @season = :fall
-      @new_holiday_name = :columbus_day
-      @supplies_list = ["flags", "parade floats", "candle sticks"]
-      @new_holiday_hash = add_new_holiday_with_supplies(holiday_supplies, @season, @new_holiday_name, @supplies_list)
+    let(:columbus_supplies) { ["Flags", "Parade Floats", "Candle Sticks"] }
+    let(:v_day_supplies)    { ["Cupid Cut-Out", "Candy Hearts"] }
+    let(:add_columbus_day)  { add_new_holiday_with_supplies(holiday_supplies, :fall, :columbus_day, columbus_supplies) }
+    let(:add_v_day)         { add_new_holiday_with_supplies(holiday_supplies, :winter, :valentines_day, v_day_supplies) }
+
+    it "returns an updated version of the original hash" do
+      [add_columbus_day, add_v_day.class].each do |result|
+        expect(result.class).to eq(Hash)
+      end
     end
 
-    it "should still have exactly 4 seasons" do
-      expect(holiday_supplies.keys.size).to eq(@new_holiday_hash.keys.size)
+    it "still has exactly four seasons" do
+      [add_columbus_day, add_v_day.class].each do |result|
+        expect(result.keys.size).to eq(4)
+      end
     end
 
-    it "should have an extra holiday in a season" do
-      expect(@new_holiday_hash[@season][@new_holiday_name]).to eq(@supplies_list)
+    it "has two total holidays in fall when holiday is added to fall" do
+      num_of_keys_in_fall = add_columbus_day[:fall].keys.size
+      expect(num_of_keys_in_fall).to eq(holiday_supplies[:fall].keys.size + 1)
+      expect(num_of_keys_in_fall).to eq(2)
+    end
+
+    it "has three total holidays in winter when holiday is added to winter" do
+      num_of_keys_in_winter = add_v_day[:winter].keys.size
+      expect(num_of_keys_in_winter).to eq(holiday_supplies[:winter].keys.size + 1)
+      expect(num_of_keys_in_winter).to eq(3)
+    end
+
+    it "adds an extra holiday to the hash in the correct season
+       where the key is the holiday name and 
+       the value is the array of supplies" do
+      expect(add_columbus_day[:fall][:columbus_day]).to eq(columbus_supplies)
+      expect(add_v_day[:winter][:valentines_day]).to eq(v_day_supplies)
     end
   end
 
   # Question 5
   # Write a method to collect all Winter supplies from all the winter holidays
   describe "#all_winter_holiday_supplies" do
-    before do
-      @winter_supplies = ["Lights", "Wreath", "Party Hats"]
-    end
-
-    it "should have all the winter supplies" do
-      expect(all_winter_holiday_supplies(holiday_supplies)).to eq(@winter_supplies)
+    it "has all the winter supplies" do
+      ["Lights", "Wreath", "Party Hats"].each do |supply|
+        expect(all_winter_holiday_supplies(holiday_supplies)).to include(supply)
+      end
     end
   end
 
