@@ -71,13 +71,13 @@ describe "holiday_supplies_hash" do
     let(:add_v_day)         { add_new_holiday_with_supplies(holiday_supplies, :winter, :valentines_day, v_day_supplies) }
 
     it "returns an updated version of the original hash" do
-      [add_columbus_day, add_v_day.class].each do |result|
+      [add_columbus_day, add_v_day].each do |result|
         expect(result.class).to eq(Hash)
       end
     end
 
     it "still has exactly four seasons" do
-      [add_columbus_day, add_v_day.class].each do |result|
+      [add_columbus_day, add_v_day].each do |result|
         expect(result.keys.size).to eq(4)
       end
     end
