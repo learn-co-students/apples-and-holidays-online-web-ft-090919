@@ -12,7 +12,6 @@ end
 
 def add_new_holiday_with_supplies(supplies_hash, season, new_holiday_name, supplies_list)
   supplies_hash[season][new_holiday_name] = supplies_list
-
   supplies_hash
 end
 
