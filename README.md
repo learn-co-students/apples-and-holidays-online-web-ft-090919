@@ -1,5 +1,5 @@
 ---
-tags: collect, select, hashes, iteration, map, enumerables
+tags: collect, map, select, hashes, iteration, enumerables, compact, flatten
 languages: ruby
 resources: 2
 ---
@@ -10,13 +10,15 @@ resources: 2
 
 ### Instructions
 
-In `lib/apple.rb` write two methods that will pick the apples out of the fruits array, one using select, and the other using collect.
+In `lib/apple.rb` write two methods that will pick the apples out of the fruits array, one using `select`, and the other using `collect`.
 
 ```ruby
 fruits = ["apple", "orange", "apple"]
 
 apple_picker_with_select(fruits) #=> ["apple", "apple"]
 ```
+
+Think about the difference between `select` and `collect`. Which one makes more sense to use? What do you think the benefits or using one over the other, in this case?
 
 ## The Holiday Suppliers
 
@@ -42,7 +44,9 @@ holiday_supplies = {
 }
 ```
 
-1. In `lib/holiday.rb`, write a method that returns the second supply for the Fourth of July. For eg:
+Write your methods in `lib/holiday.rb`; use the comments in each method as guides.
+
+1. Write a method that returns the second supply for the Fourth of July. For eg:
 
 ```ruby
 def second_supply_for_fourth_of_july(holiday_supplies)
