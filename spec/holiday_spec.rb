@@ -35,14 +35,9 @@ describe "holiday_supplies_hash" do
     let(:xmas)      { holiday_supplies[:winter][:christmas] }
     let(:new_years) { holiday_supplies[:winter][:new_years] }
 
-    it "adds a supply to a (any) winter holiday" do
+    it "iterates through winter holidays adds a supply to any one" do
       add_supply_to_winter_holiday(holiday_supplies, "Balloons")
       expect(xmas + new_years).to include("Balloons")
-    end
-
-    it "adds a supply to a winter holiday" do
-      add_supply_to_winter_holiday(holiday_supplies, "Tinsel")
-      expect(xmas + new_years).to include("Tinsel")
     end
   end
 
