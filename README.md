@@ -6,6 +6,10 @@ resources: 2
 
 # Apples and Holidays
 
+## Objectives
+
+Get comfortable interating over arrays and hashes. This lab is broken into two sections: apple picker and holiday supplies.
+
 ## Apple Picker
 
 ### Instructions
@@ -46,7 +50,7 @@ holiday_supplies = {
 
 Write your methods in `lib/holiday.rb`; use the comments in each method as guides.
 
-1. Write a method that returns the second supply for the Fourth of July. For eg:
+* Write a method that returns the second supply for the Fourth of July. For eg:
 
 ```ruby
 def second_supply_for_fourth_of_july(holiday_supplies)
@@ -54,19 +58,19 @@ def second_supply_for_fourth_of_july(holiday_supplies)
 end
 ```
 
-2. Write a method that adds a supply to a Winter holiday.
+* Write a method that adds a supply to a Winter holiday.
 
-3. Write a method that adds a supply to Memorial Day.
+* Write a method that adds a supply to Memorial Day.
 
-4. Write a method that adds a new holiday and its associated supplies to any season.
+* Write a method that adds a new holiday and its associated supplies to any season.
 
-5. Write a method to collect all Winter supplies from all the winter holidays. For eg:
+* Write a method to collect all Winter supplies from all the winter holidays. For eg:
 
 ```bash
 winter_supplies(holiday_supplies) #=> ["Lights", "Wreath", etc]
 ```
 
-6. Write a method that uses a loop to list out all the supplies you have for each holiday and the season.
+* Write a method that uses a loop to list out all the supplies you have for each holiday and the season.
 
 
 Output:
@@ -76,7 +80,7 @@ Winter:
   New Years: Party Hats
 ```
 
-7. Write a method to collect all holidays with BBQ. For eg:
+* Write a method to collect all holidays with BBQ. For eg:
 
 ```bash
 holidays_with_bbqs(holiday_supplies) #=> [:fourth_of_july, :memorial_day]
