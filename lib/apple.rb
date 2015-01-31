@@ -5,7 +5,6 @@ end
 
 def apple_picker_with_collect(fruit_list)
   # fruit_list will look something like: ["apple", "banana", "apple"]
-  # you want to return an array that has true or false in it:
-  #   * true if the item at the identical index matches the string apple, 
-  #   * false if it doesn't
+  # you want to return an array that just the apples, just like the 
+  # challenge above
 end
