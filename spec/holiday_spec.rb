@@ -88,7 +88,7 @@ describe "holiday_supplies_hash" do
     end
 
     it "adds an extra holiday to the hash in the correct season
-       where the key is the holiday name and 
+       where the key is the holiday name and
        the value is the array of supplies" do
       expect(add_columbus_day[:fall][:columbus_day]).to eq(columbus_supplies)
       expect(add_v_day[:winter][:valentines_day]).to eq(v_day_supplies)
@@ -151,6 +151,7 @@ TEXT
 
     # it "should output the formatted list of holidays and their supplies" do
     #   expect($stdout).to receive(:puts).with(@output)
+    #   all_supplies_in_holidays(holiday_supplies)
     # end
 
   end
