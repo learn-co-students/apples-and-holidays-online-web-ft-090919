@@ -28,8 +28,9 @@ describe "Picking Apples" do
 
     it 'calls on select' do
       my_fruits = fruits
-      expect(my_fruits).to receive(:select)
-      apple_picker_with_select(my_fruits)
+      result = my_fruits.select { |item| item == "apple" }
+      expect(my_fruits).to receive(:select).and_return(result)
+      expect(apple_picker_with_select(my_fruits)).to eq(["apple", "apple"])
     end
   end
   
@@ -58,8 +59,9 @@ describe "Picking Apples" do
 
     it 'calls on collect' do
       my_fruits = fruits
-      expect(my_fruits).to receive(:collect)
-      apple_picker_with_collect(my_fruits)
+      result = my_fruits.collect { |item| item if item == "apple" }
+      expect(my_fruits).to receive(:collect).and_return(result)
+      expect(apple_picker_with_collect(my_fruits)).to eq(["apple", "apple"])
     end    
   end
 end
