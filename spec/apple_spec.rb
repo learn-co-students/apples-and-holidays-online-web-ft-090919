@@ -1,12 +1,9 @@
-require 'spec_helper'
-
 describe "Picking Apples" do
   let(:fruits)   { ["apple", "orange", "apple"] }
   let(:smoothie) { ["carrot", "apple", "pepper", "cucumber", "apple", "apple"] }
   let(:veggies)  { ["pepper", "carrot", "cucumber"] }
 
   describe "#apple_picker_with_select" do
-
     it "picks out the words that are not apple" do
       expect(apple_picker_with_select(fruits)).to_not include("orange")
       veggies.each do |veg| 
@@ -27,6 +24,12 @@ describe "Picking Apples" do
     it "returns an array of all the apple strings that are in the original array" do
       expect(apple_picker_with_select(fruits)).to eq(["apple", "apple"])
       expect(apple_picker_with_select(smoothie)).to eq(["apple", "apple", "apple"])
+    end
+
+    it 'calls on select' do
+      my_fruits = fruits
+      expect(my_fruits).to receive(:select)
+      apple_picker_with_select(my_fruits)
     end
   end
   
@@ -52,6 +55,11 @@ describe "Picking Apples" do
       expect(apple_picker_with_collect(fruits)).to eq(["apple", "apple"])
       expect(apple_picker_with_collect(smoothie)).to eq(["apple", "apple", "apple"])
     end
-    
+
+    it 'calls on collect' do
+      my_fruits = fruits
+      expect(my_fruits).to receive(:collect)
+      apple_picker_with_select(my_fruits)
+    end    
   end
 end
