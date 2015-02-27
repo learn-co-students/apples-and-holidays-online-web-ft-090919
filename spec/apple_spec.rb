@@ -59,7 +59,7 @@ describe "Picking Apples" do
     it 'calls on collect' do
       my_fruits = fruits
       expect(my_fruits).to receive(:collect)
-      apple_picker_with_select(my_fruits)
+      apple_picker_with_collect(my_fruits)
     end    
   end
 end
