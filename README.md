@@ -22,7 +22,7 @@ fruits = ["apple", "orange", "apple"]
 apple_picker_with_select(fruits) #=> ["apple", "apple"]
 ```
 
-Think about the difference between `select` and `collect`. Which one makes more sense to use? What do you think the benefits or using one over the other, in this case?
+Think about the difference between `select` and `collect`. Which one makes more sense to use? What do you think the benefits are of using one over the other, in this case?
 
 ## The Holiday Suppliers
 
