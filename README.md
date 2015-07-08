@@ -4,8 +4,6 @@ languages: ruby
 resources: 2
 ---
 
-# Apples and Holidays
-
 ## Objectives
 
 Get comfortable interating over arrays and hashes. This lab is broken into two sections: apple picker and holiday supplies.
