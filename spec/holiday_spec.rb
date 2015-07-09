@@ -58,7 +58,7 @@ describe "holiday_supplies_hash" do
     it "modifies the original hash by adding supplies of a new holiday to a season" do 
       columbus_day_supplies = ["Flags", "Parade Floats", "Italian Food"]
 
-      add_new_holiday_with_supplies(holiday_supplies, :fall, :columbus_day, columbus_supplies)
+      add_new_holiday_with_supplies(holiday_supplies, :fall, :columbus_day, columbus_day_supplies)
 
       expect(holiday_supplies[:fall].keys).to include(:columbus_day)
       expect(holiday_supplies[:fall][:columbus_day]).to match_array(columbus_day_supplies)
@@ -66,8 +66,8 @@ describe "holiday_supplies_hash" do
       valentines_day_supplies = ["Cupid Cut-Out", "Candy Hearts"]
       add_new_holiday_with_supplies(holiday_supplies, :winter, :valentines_day, valentines_day_supplies)
 
-      expect(holiday_supplies[:fall].keys).to include(:valentines_day)
-      expect(holiday_supplies[:fall][:columbus_day]).to match_array(valentines_day_supplies)
+      expect(holiday_supplies[:winter].keys).to include(:valentines_day)
+      expect(holiday_supplies[:winter][:valentines_day]).to match_array(valentines_day_supplies)
     end
   
   end
