@@ -29,14 +29,10 @@ describe "holiday_supplies_hash" do
   # Question 2
   # Write a method that adds a supply to all Winter holidays
   describe "#add_supply_to_winter_holidays" do
-
-    let(:xmas)      { holiday_supplies[:winter][:christmas] }
-    let(:new_years) { holiday_supplies[:winter][:new_years] }
-
     it "iterates through winter holidays adds a supply to each one" do
       add_supply_to_winter_holidays(holiday_supplies, "Balloons")
-      expect(xmas).to include("Balloons")
-      expect(new_years).to include("Balloons")
+      expect(holiday_supplies[:winter][:christmas]).to include("Balloons")
+      expect(holiday_supplies[:winter][:new_years]).to include("Balloons")
     end
   end
 
@@ -59,39 +55,21 @@ describe "holiday_supplies_hash" do
   # Question 4
   # Write a method that adds a new holiday and its associated supplies to any season
   describe "#add_new_holiday_with_supplies" do
-    let(:columbus_supplies) { ["Flags", "Parade Floats", "Candle Sticks"] }
-    let(:v_day_supplies)    { ["Cupid Cut-Out", "Candy Hearts"] }
-    let(:add_columbus_day)  { add_new_holiday_with_supplies(holiday_supplies, :fall, :columbus_day, columbus_supplies) }
-    let(:add_v_day)         { add_new_holiday_with_supplies(holiday_supplies, :winter, :valentines_day, v_day_supplies) }
+    it "modifies the original hash by adding supplies of a new holiday to a season" do 
+      columbus_day_supplies = ["Flags", "Parade Floats", "Italian Food"]
 
-    it "returns an updated version of the original hash" do
-      [add_columbus_day, add_v_day].each do |result|
-        expect(result.class).to eq(Hash)
-      end
-    end
+      add_new_holiday_with_supplies(holiday_supplies, :fall, :columbus_day, columbus_day_supplies)
 
-    it "still has exactly four seasons" do
-      [add_columbus_day, add_v_day].each do |result|
-        expect(result.keys.size).to eq(4)
-      end
-    end
+      expect(holiday_supplies[:fall].keys).to include(:columbus_day)
+      expect(holiday_supplies[:fall][:columbus_day]).to match_array(columbus_day_supplies)
 
-    it "has two total holidays in fall when holiday is added to fall" do
-      num_of_keys_in_fall = add_columbus_day[:fall].keys.size
-      expect(num_of_keys_in_fall).to eq(2)
-    end
+      valentines_day_supplies = ["Cupid Cut-Out", "Candy Hearts"]
+      add_new_holiday_with_supplies(holiday_supplies, :winter, :valentines_day, valentines_day_supplies)
 
-    it "has three total holidays in winter when holiday is added to winter" do
-      num_of_keys_in_winter = add_v_day[:winter].keys.size
-      expect(num_of_keys_in_winter).to eq(3)
+      expect(holiday_supplies[:winter].keys).to include(:valentines_day)
+      expect(holiday_supplies[:winter][:valentines_day]).to match_array(valentines_day_supplies)
     end
-
-    it "adds an extra holiday to the hash in the correct season
-       where the key is the holiday name and
-       the value is the array of supplies" do
-      expect(add_columbus_day[:fall][:columbus_day]).to eq(columbus_supplies)
-      expect(add_v_day[:winter][:valentines_day]).to eq(v_day_supplies)
-    end
+  
   end
 
   # Question 5
