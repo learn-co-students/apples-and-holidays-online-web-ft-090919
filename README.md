@@ -8,7 +8,7 @@ Get comfortable interating over arrays and hashes. This lab is broken into two s
 
 ### Instructions
 
-In `lib/apple.rb` write two methods that will pick the apples out of the fruits array, one using `select`, and the other using `collect`.
+In `lib/apple.rb` write two methods that will pick the apples out of the fruits array, one using `collect`, and the other using `select`.
 
 ```ruby
 fruits = ["apple", "orange", "apple"]
