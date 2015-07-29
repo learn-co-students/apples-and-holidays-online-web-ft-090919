@@ -67,7 +67,7 @@ describe "holiday_supplies_hash" do
       add_new_holiday_with_supplies(holiday_supplies, :winter, :valentines_day, valentines_day_supplies)
 
       expect(holiday_supplies[:winter].keys).to include(:valentines_day)
-      expect(holiday_supplies[:winter][:columbus_day]).to match_array(valentines_day_supplies)
+      expect(holiday_supplies[:winter][:valentines_day]).to match_array(valentines_day_supplies)
     end
   
   end
