@@ -19,7 +19,7 @@ apple_picker_with_select(fruits) #=> ["apple", "apple"]
 1. First, code the solution to the `apple_picker_with_select` method. Use `.select` to iterate over a given array, select the items in the array that are equal to `"apple"` and return a new array containing all of the `"apples"` from the original array. Use `binding.pry` to understand the return value of using the `.select` method on an array.
 
 2. Now, code the solution to `apple_picker_with_collect`. 
-  * Set a variable, `result_of_collecting` equal to the return value of calling the `.collect` method on a given array to achieve the same result as above. **Use the same code the `do` `end` block that follows `.collect` as you did for `.select`**. 
+  * Set a variable, `result_of_collecting` equal to the return value of calling the `.collect` method on a given array to achieve the same result as above. **Use the same code as in the `do` `end` block that follows `.collect` as you did for `.select`**. 
   * Use `binding.pry` to examine the return value of doing so. You should see that the return value is an array of `"apple"` strings, interspected with `nil` values. Oh no! Now we have to remove the `nil` elements from our array!
   * Use the `.compact` method on `result_of_collecting` to remove all the `nil` elements from your array. 
 
