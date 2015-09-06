@@ -25,7 +25,7 @@ apple_picker_with_select(fruits) #=> ["apple", "apple"]
 
 **Important:** Think about the difference between `select` and `collect`. Which one makes more sense to use? What do you think the benefits are of using one over the other, in this case?
 
-**Reminder:** You can `require 'pry'` on the top of your file and use binding.pry inside your methods. Then, when you run rspec, you'll be dropped right into the middle of the method. This will help you explore what is going one and understand how to get the tests passing. 
+**Reminder:** You can `require 'pry'` on the top of your file and use binding.pry inside your methods. Then, when you run rspec, you'll be dropped right into the middle of the method. This will help you explore what is going on and understand how to get the tests passing. 
 
 ## The Holiday Suppliers
 
@@ -61,7 +61,7 @@ def second_supply_for_fourth_of_july(holiday_supplies)
 end
 ```
 
-* Write a method that adds a supply to a Winter holiday.
+* Write a method that adds a supply to both Winter holidays.
 
 * Write a method that adds a supply to Memorial Day.
 
