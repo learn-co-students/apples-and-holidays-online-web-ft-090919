@@ -79,3 +79,5 @@ holidays_with_bbqs(holiday_supplies)
 
 ## Resources
 * [Codequizzes](http://www.codequizzes.com/learn-ruby/) - [Iteration Nested Data Structures](http://www.codequizzes.com/learn-ruby/iteration-nested-data-structures)
+
+<a href='https://learn.co/lessons/apples-and-holidays' data-visibility='hidden'>View this lesson on Learn.co</a>
