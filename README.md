@@ -2,7 +2,7 @@
 
 ## Objectives
 
-1. Get comfortable interating over hashes.
+1. Iterate over nested, or multidimensional, hashes.
 
 ## The Holiday Suppliers
 
