@@ -80,4 +80,4 @@ holidays_with_bbqs(holiday_supplies)
 ## Resources
 * [Codequizzes](http://www.codequizzes.com/learn-ruby/) - [Iteration Nested Data Structures](http://www.codequizzes.com/learn-ruby/iteration-nested-data-structures)
 
-<a href='https://learn.co/lessons/apples-and-holidays' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/apples-and-holidays' title='Iterating Over Hashes'>Iterating Over Hashes</a> on Learn.co and start learning to code for free.</p>
