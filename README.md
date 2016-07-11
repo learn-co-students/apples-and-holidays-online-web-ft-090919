@@ -78,6 +78,9 @@ holidays_with_bbqs(holiday_supplies)
 **Reminder:** This is a challenging lab, so remember to use Pry, googling and the Learn community to help you get the tests passing.
 
 ## Resources
-* [Codequizzes](http://www.codequizzes.com/learn-ruby/) - [Iteration Nested Data Structures](http://www.codequizzes.com/learn-ruby/iteration-nested-data-structures)
+
+- [StackOverflow: Accessing Elements of Nested Hashes in Ruby](http://stackoverflow.com/questions/5544858/accessing-elements-of-nested-hashes-in-ruby)
+- [honeybadger - Advanced Ruby Hash Techniques](http://blog.honeybadger.io/advanced-ruby-hash-techniques/)
+
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/apples-and-holidays' title='Iterating Over Hashes'>Iterating Over Hashes</a> on Learn.co and start learning to code for free.</p>
