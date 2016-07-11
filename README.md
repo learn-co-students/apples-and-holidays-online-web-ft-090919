@@ -56,8 +56,8 @@ winter_supplies(holiday_supplies) #=> ["Lights", "Wreath", etc]
 * Here are a few helpful tips:
   * Our hash keys are symbols. We need to convert them into strings. Use the `.to_s` method on a symbol to convert it into a string.
   * Look closely at the output string that the test is expecting. You'll notice that it expects holiday names, like "New Years", to have both words capitalized. Ruby has a `.capitalize` method that you can call on a string. **But, note:**
-    * `.capitalize` returns the capitalized string but *doesn't change* the original string. So, when you call on that same string in the future, it *isn't capitalized!*. You can capitalize a string for now and evermore by using the `!`, bang operator.
-    * You'll need to capitalize *both words* in a given holiday's name. If you call `"new years".capitalize!`. It will return `"New years"`. In order to capitalize *both* words, you'll need to `.split` the string into an array and iterate over that array to `.capitalize!` each word in it. Then, you'll need to `.join` the array back into a string.
+    * `.capitalize` returns the capitalized string but *doesn't change* the original string. So, when you call on that same string in the future, it *isn't capitalized!* You can capitalize a string for now and evermore by using the bang operator (`!`).
+    * You'll need to capitalize *both words* in a given holiday's name. If you call `"new years".capitalize!`, it will return `"New years"`. In order to capitalize *both* words, you'll need to `.split` the string into an array and iterate over that array to `.capitalize!` each word in it. Then, you'll need to `.join` the array back into a string.
     * If you're unfamiliar with the methods mentioned above, look them up in the Ruby documentation.
 
 Example of expected output:
@@ -68,14 +68,14 @@ Winter:
   New Years: Party Hats
 ```
 
-* Write a method to collect all holidays with BBQ. The method should behave as seen below:
+* Write a method to collect all holidays with "BBQ" in the supply array. The method should behave as seen below:
 
 ```bash
 holidays_with_bbqs(holiday_supplies)
 #=> [:fourth_of_july, :memorial_day]
 ```
 
-**Reminder:** This is a challenging lab, so remember to use Pry, googling and the Learn community to help you get the tests passing.
+**Reminder:** This is a challenging lab, so remember to use Pry, Google, and the Learn community to help you get the tests passing.
 
 ## Resources
 

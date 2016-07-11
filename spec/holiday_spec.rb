@@ -46,7 +46,7 @@ describe "holiday_supplies_hash" do
       expect(memorial_day_supplies).to include("Grill")
     end
 
-    it "adds a supply to memorial day" do
+    it "adds another supply to memorial day" do
       add_supply_to_memorial_day(holiday_supplies, "Table Cloth")
       expect(memorial_day_supplies).to include("Table Cloth")
     end
