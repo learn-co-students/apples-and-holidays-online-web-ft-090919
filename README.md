@@ -4,7 +4,6 @@
 
 1. Iterate over nested, or multidimensional, hashes.
 
-
 ## The Holiday Suppliers
 
 ### Instructions
