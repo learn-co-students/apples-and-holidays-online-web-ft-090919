@@ -113,14 +113,12 @@ def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
   
-  wrong_array = []
+  
   results_array = []
   holiday_hash.each do |season, event|
     event.each do |key, value|
       if value.include?("BBQ")
         results_array << key
-      else 
-        wrong_array << key
     end 
   end
 end
